@@ -31,3 +31,6 @@ model.compile(optimizer='rmsprop',
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 model.fit(train_images, train_labels, epochs=5, batch_size=64)
+
+test_loss, test_acc = model.evaluate(test_images, test_labels)
+test_acc
